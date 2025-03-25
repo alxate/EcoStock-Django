@@ -1,17 +1,14 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-<<<<<<< HEAD
-=======
-
 # Modelo de Usuario Personalizado (RF01)
->>>>>>> 1936ee00aa1a2fb60b817cc2ba8cf0c529b5ab00
+
 class CustomUser(AbstractUser):
     ROLES = (
         ('admin', 'Administrador'),
         ('inventario', 'Operador de Inventario')
     )
-<<<<<<< HEAD
+
     role = models.CharField(
         max_length=20,
         choices=ROLES,
@@ -21,7 +18,7 @@ class CustomUser(AbstractUser):
 
     def __str__(self):
         return self.username
-=======
+
     role = models.CharField(max_length=20, choices=ROLES, default='inventario')
     telefono = models.CharField(max_length=15, blank=True, null=True)
 
@@ -61,4 +58,4 @@ class MovimientoInventario(models.Model):
     fecha = models.DateTimeField(auto_now_add=True)
     usuario = models.ForeignKey('CustomUser', on_delete=models.SET_NULL, null=True)  # <-- Usa 'CustomUser' como string
     motivo = models.TextField(blank=True)
->>>>>>> 1936ee00aa1a2fb60b817cc2ba8cf0c529b5ab00
+

@@ -1,0 +1,11 @@
+/* Personalización del admin */
+#header,
+#content {
+  padding: 30px !important;
+  background-color: #f3f3f3;
+}
+
+div.breadcrumbs {
+  padding: 20px 25px !important;
+  background: #e8f0fe;
+}

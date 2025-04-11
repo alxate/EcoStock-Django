@@ -1,9 +1,26 @@
+<!-- main_app/templates/home.html -->
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <title>EcoStock-Pagina de Inicio</title>
+    <meta charset="UTF-8" />
+    <title>EcoStock – Página de Inicio</title>
   </head>
   <body>
     <h1>Bienvenido a EcoStock</h1>
+
+    <!-- Botón admin Django -->
+    <a href="/admin/">
+      <button class="btn btn-dark">Admin</button>
+    </a>
+
+    <!-- Botón para login -->
+    <a href="{% url 'login' %}">
+      <button class="btn btn-primary">Login</button>
+    </a>
+
+    <!-- Botón para register -->
+    <a href="{% url 'register' %}">
+      <button class="btn btn-success">Register</button>
+    </a>
   </body>
 </html>
